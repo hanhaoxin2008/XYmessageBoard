@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>考研留言板</title>
+
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+    <script src="/static/js/index.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>考研留言板</h1>
+        <section id="message_input">
+            <form  action="api/add_message" method="post">
+                <label>名称 <input name="name" type="text"></label>
+                <label>目标学校 <input name="school" type="text"></label>
+                <label>目标专业 <input name="major" type="text"></label>
+                <label>所在地 <input name="area" type="text"></label>
+                <textarea name="content"></textarea>
+                <input type="submit">
+            </form>
+        </section>
+
+        <section id="message_show">
+            <!-- message列表-->
+            <ul id="message_list">
+                <li>
+                    <div class="message_box">
+                        <p class="personal"></p>
+                        <p class="content"></p>
+                    </div>
+                </li>
+            </ul>
+
+        </section>
+
+
+    </div>
+
+
+
+</body>
+</html>
